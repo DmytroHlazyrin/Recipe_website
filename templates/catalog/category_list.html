@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+{% block content %}
+  <h1>
+    Category List
+    <a href="{% url 'catalog:category-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h1>
+  <form class="form-inline" method="get" action="">
+    {{ search_form|crispy }}
+    <input class="btn btn-primary" type="submit" value="👀">
+  </form>
+
+  {% if category_list %}
+    <table class="table">
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+
+      {% for category in category_list %}
+        <tr>
+          {% if category.image %}
+            <td>
+              <img src="{{ category.image }}" alt="{{ category.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';"
+         style="max-width: 200px; height: auto;">
+            </td>
+          {% else %}
+            <td>
+              <img src="{% static 'images/dish_image.png' %}" alt="My Image" style="max-width: 200px; height: auto;">
+            </td>
+          {% endif %}
+          <td>
+              {{ category.name }}
+          </td>
+          <td>
+              {{ category.description }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  {% else %}
+      <p>There are no categories in the service.</p>
+  {% endif %}
+{% endblock %}
