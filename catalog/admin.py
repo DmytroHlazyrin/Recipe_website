@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from catalog.models import Cook, Category, Dish, Ingredient, Composition, Review, Step
+from catalog.models import Cook, Category, Dish, Ingredient, Composition, Review
 
 
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
-    list_display = ["name", "author", "cooking_time", "calories", "category"]
+    list_display = ["id", "name", "author", "cooking_time", "calories", "category"]
     list_filter = ["category",]
     search_fields = ["name", "author", ]
 
@@ -22,7 +22,27 @@ class ReviewAdmin(admin.ModelAdmin):
     search_fields = ["author", "dish", ]
 
 
-admin.site.register(Cook, UserAdmin)
+@admin.register(Cook)
+class CookAdmin(admin.ModelAdmin):
+    list_display = ("id", ) + UserAdmin.list_display
+    fieldsets = UserAdmin.fieldsets + (
+        (("Avatar", {"fields": ("avatar",)}),)
+    )
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        (
+            (
+                "Additional info",
+                {
+                    "fields": (
+                        "first_name",
+                        "last_name",
+                        "avatar",
+                    )
+                },
+            ),
+        )
+    )
+
+
 admin.site.register(Category)
 admin.site.register(Composition)
-admin.site.register(Step)

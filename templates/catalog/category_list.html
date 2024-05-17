@@ -3,46 +3,40 @@
 {% load static %}
 
 {% block content %}
-  <h1>
-    Category List
-    <a href="{% url 'catalog:category-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
+  <h1 class="text-center">
+    ALL CATEGORIES
   </h1>
-  <form class="form-inline" method="get" action="">
-    {{ search_form|crispy }}
-    <input class="btn btn-primary" type="submit" value="👀">
-  </form>
+    <div class="justify-content-between align-items-center mb-3">
+      <form class="form-inline d-flex" method="get" action="" style="height: 40px">
+          {{ search_form|crispy }}
+          <input class="btn btn-primary ml-2" type="submit" value="👀" style="height: 38px">
+      </form>
+    </div>
 
   {% if category_list %}
-    <table class="table">
-      <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
+  <div class="album py-5 bg-light">
+      <div class="container">
 
-      {% for category in category_list %}
-        <tr>
-          {% if category.image %}
-            <td>
-              <img src="{{ category.image }}" alt="{{ category.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';"
-         style="max-width: 200px; height: auto;">
-            </td>
-          {% else %}
-            <td>
-              <img src="{% static 'images/dish_image.png' %}" alt="My Image" style="max-width: 200px; height: auto;">
-            </td>
-          {% endif %}
-          <td>
-              {{ category.name }}
-          </td>
-          <td>
-              {{ category.description }}
-          </td>
-        </tr>
-      {% endfor %}
-    </table>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for category in category_list %}
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="{{ category.image }}" alt="{{ category.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';" style="max-height: 200px; width: auto; border-radius: 5px">
+              <div class="card-body">
+                <p class="card-text">{{ category.name }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
 
   {% else %}
       <p>There are no categories in the service.</p>

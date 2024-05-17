@@ -19,13 +19,19 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from catalog.views import index
+from catalog.views import index, SignUpView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("catalog.urls", namespace="catalog")),
     path("accounts/", include("django.contrib.auth.urls")),
+    path('accounts/signup/', SignUpView.as_view(), name='signup'),
     path("__debug__/", include("debug_toolbar.urls")),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+{% block content %}
+{% for cook, dish_count in cook_list %}
+<div class="container bootstrap snippets bootdey">
+  <div class="col">
+    <div class="card shadow-sm">
+  <div class="panel-body inf-content">
+    <div class="row">
+      <div class="col-md-2">
+        <img src="{% if cook.avatar %}
+          {{ cook.avatar.url }}
+        {% else %}
+          {% static 'images/default_ava.png' %}
+        {% endif %}" alt="Cook`s photo" class="img-fluid rounded-circle mb-3" style="max-height: 200px; width: auto;">
+      </div>
+      <div class="col-md-8">
+        <strong>Information</strong><br>
+        <div class="table-responsive">
+          <table class="table table-user-information">
+            <tbody>
+            {% if cook.first_name %}
+            <tr>
+              <td>
+                <strong>
+                  <span class="glyphicon glyphicon-user  text-primary"></span>
+                  Name
+                </strong>
+              </td>
+              <td class="text-primary">
+                {{ cook.first_name }}
+              </td>
+            </tr>
+            {% endif %}
+            {% if cook.last_name %}
+            <tr>
+              <td>
+                <strong>
+                  <span class="glyphicon glyphicon-cloud text-primary"></span>
+                  Lastname
+                </strong>
+              </td>
+              <td class="text-primary">
+                {{ cook.last_name }}
+              </td>
+            </tr>
+            {% endif %}
+            <tr>
+              <td>
+                <strong>
+                  <span
+                      class="glyphicon glyphicon-bookmark text-primary"></span>
+                  Username
+                </strong>
+              </td>
+              <td class="text-primary">
+                {{ cook.username }}
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <strong>
+                  <span
+                      class="glyphicon glyphicon-eye-open text-primary"></span>
+                  Recipes
+                </strong>
+              </td>
+              <td class="text-primary">
+                {{ dish_count }}
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>
+                  <span
+                      class="glyphicon glyphicon-calendar text-primary"></span>
+                  Joined
+                </strong>
+              </td>
+              <td class="text-primary">
+                {{ cook.date_joined.date }}
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+<br>
+{% endfor %}
+{% endblock %}

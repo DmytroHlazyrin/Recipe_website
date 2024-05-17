@@ -18,7 +18,7 @@ class Ingredient(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(max_length=1000, blank=True, null=True)
-    image = models.URLField(null=True, blank=True, default="https://img.freepik.com/free-psd/breakfast-item-icon-isolated-3d-render-ilustration_47987-11153.jpg?size=338&ext=jpg&ga=GA1.1.1292351815.1709337600&semt=ais")
+    image = models.URLField(null=True, blank=True)
 
     class Meta:
         ordering = ("name",)
@@ -49,7 +49,7 @@ class Dish(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="dishes")
     name = models.CharField(max_length=255)
     description = models.TextField()
-    recipe = models.ManyToManyField("Step", related_name="dishes")
+    recipe = models.TextField(max_length=10000)
     cooking_time = models.DurationField()
     servings = models.IntegerField()
     addition_date = models.DateField(auto_now_add=True)
@@ -62,11 +62,6 @@ class Dish(models.Model):
 
     class Meta:
         verbose_name_plural = "Dishes"
-
-
-class Step(models.Model):
-    action = models.TextField(max_length=1000)
-    image = models.URLField(null=True, blank=True)
 
 
 class Composition(models.Model):
@@ -92,6 +87,7 @@ class Composition(models.Model):
 
 class Cook(AbstractUser):
     favorite_dishes = models.ManyToManyField(Dish)
+    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
 
     class Meta:
         verbose_name = "cook"

@@ -1,23 +1,48 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 text-center">
+            <img src="{% if cook.profile_image %}{{ cook.profile_image.url }}{% else %}{% static 'images/default-profile.png' %}{% endif %}" alt="Cook`s photo" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+            <h2>{{ cook.username }}</h2>
+            <p class="text-muted">{{ cook.email }}</p>
+        </div>
+        <div class="col-lg-8">
+            <h3>О {{ cook.username }}</h3>
+            <p>{{ cook.bio }}</p>
+            <h4>Специализации</h4>
+            <ul class="list-group list-group-flush mb-4">
+                {% for specialty in cook.specialties.all %}
+                <li class="list-group-item">{{ specialty }}</li>
+                {% endfor %}
+            </ul>
+            <h4>Рецепты</h4>
+            <div class="row">
+                {% for dish in cook.dishes.all %}
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="{{ dish.image.url }}" class="card-img-top" alt="{{ dish.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ dish.title }}</h5>
+                            <p class="card-text">{{ dish.description|truncatewords:20 }}</p>
+                            <a href="{% url 'dish-detail' dish.id %}" class="btn btn-primary">Посмотреть рецепт</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 
-  <p><strong>First name:</strong> {{ cook.first_name }}</p>
-  <p><strong>Last name:</strong> {{ cook.last_name }}</p>
-  <p><strong>Is staff:</strong> {{ cook.is_staff }}</p>
+<footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2024 Рецепты. Все права защищены.</p>
+    </div>
+</footer>
 
-  <div class="ml-3">
-    <h4>Dishes</h4>
-
-    {% for dish in cook.dishes.all %}
-        <hr>
-        <p><strong>Name:</strong> {{ dish.name }}</p>
-        <p><strong>Category:</strong> {{ dish.category.name }}</p>
-        <p class="text-muted"><strong>Id:</strong> {{dish.id}}</p>
-
-    {% empty %}
-      <p>No dishes!</p>
-    {% endfor %}
-  </div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 {% endblock %}
