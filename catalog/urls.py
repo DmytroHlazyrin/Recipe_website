@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import index, CategoryListView, CookDetailView, CategoryCreateView, CategoryUpdateView, \
-    CategoryDeleteView, update_profile, SignUpView, CookListView
+    CategoryDeleteView, SignUpView, CookListView, update_profile, CategoryDetailView
 
 urlpatterns = [
     path("", index, name="index"),
@@ -15,20 +15,16 @@ urlpatterns = [
         "cooks/", CookListView.as_view(), name="cook-list"
     ),
     path("categories/", CategoryListView.as_view(), name="category-list"),
+    path("category/<int:pk>/", CategoryDetailView.as_view(), name="category-detail"),
     path(
-        "categories/create/",
+        "category/create/",
         CategoryCreateView.as_view(),
         name="category-create"
     ),
     path(
-        "categories/<int:pk>/update/",
+        "category/<int:pk>/update/",
         CategoryUpdateView.as_view(),
         name="category-update"
-    ),
-    path(
-        "categories/<int:pk>/delete/",
-        CategoryDeleteView.as_view(),
-        name="category-delete"
     ),
 ]
 

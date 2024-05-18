@@ -2,12 +2,13 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db.models import Count
+from django.db.models import Count, Q
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views import generic
 
-from .forms import CategorySearchForm, CookForm, CookCreationForm, CookSearchForm
+from .forms import CategorySearchForm, CookForm, CookCreationForm, CookSearchForm, CookForm, DishSearchForm
 from .models import Dish, Cook, Category, Composition, Review, Ingredient
 
 
@@ -37,22 +38,22 @@ class CategoryListView(generic.ListView):
     template_name = "catalog/category_list.html"
     paginate_by = 6
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(CategoryListView, self).get_context_data(**kwargs)
-        name = self.request.GET.get("name", "")
-        context["search_form"] = CategorySearchForm(
-            initial={"name": name}
-        )
-        return context
-
     def get_queryset(self):
-        queryset = Category.objects.all()
-        form = CategorySearchForm(self.request.GET)
-        if form.is_valid():
-            return queryset.filter(
-                name__icontains=form.cleaned_data["name"]
-            )
+        queryset = super().get_queryset()
+        name = self.request.GET.get("name", "")
+        if name:
+            queryset = queryset.filter(name__icontains=name)
+        queryset = queryset.annotate(num_dishes=Count('dishes'))
         return queryset
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["search_form"] = CategorySearchForm(initial={"name": name})
+        context["category_list_with_dishes_count"] = [
+            (category, category.num_dishes) for category in context["category_list"]
+        ]
+        return context
 
 
 class CategoryDetailView(generic.DetailView):
@@ -62,10 +63,18 @@ class CategoryDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         category = self.get_object()
-        num_dishes = Dish.objects.filter(category=category).count()
-        context['num_dishes'] = num_dishes
-        context['dishes'] = Dish.objects.filter(category=category)
+        queryset = Dish.objects.filter(category=category)
+        form = DishSearchForm(self.request.GET)
+        if form.is_valid():
+            query = form.cleaned_data.get('query')
+            if query:
+                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query))
+        context['num_dishes'] = queryset.count()
+        context['dishes'] = queryset
+        context['search_form'] = form
         return context
+
+
 
 
 class CategoryCreateView(LoginRequiredMixin, generic.CreateView):
@@ -85,16 +94,7 @@ class CategoryDeleteView(LoginRequiredMixin, generic.DeleteView):
     success_url = reverse_lazy("catalog:category-list")
 
 
-@login_required
-def update_profile(request):
-    if request.method == 'POST':
-        form = CookForm(request.POST, request.FILES, instance=request.user)
-        if form.is_valid():
-            form.save()
-            return redirect('catalog:cook-detail', pk=request.user.pk)
-    else:
-        form = CookForm(instance=request.user)
-    return render(request, 'catalog/update_profile.html', {'form': form})
+
 
 
 class SignUpView(generic.CreateView):
@@ -109,28 +109,42 @@ class CookDetailView(LoginRequiredMixin, generic.DetailView):
     template_name = 'catalog/cook_detail.html'
 
 
+
 class CookListView(generic.ListView):
     model = Cook
     context_object_name = "cook_list"
     template_name = "catalog/cook_list.html"
-    paginate_by = 6
+    paginate_by = 4
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(CookListView, self).get_context_data(**kwargs)
-        username = self.request.GET.get("username", "")
-        context["search_form"] = CookSearchForm(
-            initial={"username": username}
-        )
-        context['cook_list'] = [
-            (cook, cook.dishes.count()) for cook in Cook.objects.all()
+        context = super().get_context_data(**kwargs)
+        context["search_form"] = CookSearchForm(self.request.GET or None)
+        context["cook_list_with_dishes_count"] = [
+            (cook, cook.dishes_count) for cook in context["cook_list"]
         ]
         return context
 
     def get_queryset(self):
-        queryset = Cook.objects.all()
+        queryset = Cook.objects.annotate(dishes_count=Count('dishes'))
         form = CookSearchForm(self.request.GET)
         if form.is_valid():
-            return queryset.filter(
-                username__icontains=form.cleaned_data["username"]
-            )
+            username = form.cleaned_data.get('username')
+            if username:
+                queryset = queryset.filter(username__icontains=username)
         return queryset
+
+
+@login_required
+def update_profile(request, pk):
+    if request.method == 'POST':
+        form = CookForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('catalog:cook-detail', pk=request.user.pk)
+    else:
+        form = CookForm(instance=request.user)
+    return render(request, 'catalog/cook_form.html', {'form': form})
+
+
+
+

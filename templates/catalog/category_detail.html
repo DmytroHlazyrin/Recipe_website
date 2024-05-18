@@ -4,24 +4,23 @@
 
 {% block content %}
   <h1 class="text-center">
-    ALL CATEGORIES
+    ALL Dishes in category {{ category.name }}
   </h1>
 
-  {% if category_list %}
+  {% if dishes %}
   <div class="album py-5 bg-light">
       <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          {% for category, dishes_count in category_list_with_dishes_count %}
+          {% for dish in dishes %}
           <div class="col">
             <div class="card shadow-sm">
-              <img src="{{ category.image }}" alt="{{ category.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';" style="max-height: 200px; width: auto; border-radius: 5px">
+              <img src="{{ dish.image }}" alt="{{ dish.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';" style="max-height: 200px; width: auto; border-radius: 5px">
               <div class="card-body">
-                <p class="card-text text-center">{{ category.name }}</p>
-                <p class="card-text">Number of recipes: {{ dishes_count }}</p>
+                <p class="card-text">{{ dish.name }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a class="btn bg-body-secondary" href="{% url 'catalog:category-detail' category.pk %}">Go to dishes</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                 </div>
@@ -34,6 +33,6 @@
   </div>
 
   {% else %}
-      <p>There are no categories in the service.</p>
+      <p>There are no dishes in this category.</p>
   {% endif %}
 {% endblock %}

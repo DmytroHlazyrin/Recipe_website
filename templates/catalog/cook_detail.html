@@ -6,32 +6,26 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-4 text-center">
-            <img src="{% if cook.profile_image %}{{ cook.profile_image.url }}{% else %}{% static 'images/default-profile.png' %}{% endif %}" alt="Cook`s photo" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+            <img src="{% if cook.avatar %}{{ cook.avatar.url }}{% else %}{% static 'images/default_ava.png' %}{% endif %}" alt="Cook`s photo" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
             <h2>{{ cook.username }}</h2>
             <p class="text-muted">{{ cook.email }}</p>
+            {% if cook.id == user.id %}
+            <a href="{% url 'catalog:cook-update' cook.pk %}" class="btn btn-secondary">Edit profile</a>
+            {% endif %}
         </div>
         <div class="col-lg-8">
             <h3>О {{ cook.username }}</h3>
             <p>{{ cook.bio }}</p>
-            <h4>Специализации</h4>
+            <h4>NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEED</h4>
             <ul class="list-group list-group-flush mb-4">
                 {% for specialty in cook.specialties.all %}
                 <li class="list-group-item">{{ specialty }}</li>
                 {% endfor %}
             </ul>
-            <h4>Рецепты</h4>
+            <h4>Recipies</h4>
             <div class="row">
                 {% for dish in cook.dishes.all %}
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="{{ dish.image.url }}" class="card-img-top" alt="{{ dish.title }}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ dish.title }}</h5>
-                            <p class="card-text">{{ dish.description|truncatewords:20 }}</p>
-                            <a href="{% url 'dish-detail' dish.id %}" class="btn btn-primary">Посмотреть рецепт</a>
-                        </div>
-                    </div>
-                </div>
+
                 {% endfor %}
             </div>
         </div>
@@ -40,7 +34,7 @@
 
 <footer class="bg-light py-4 mt-5">
     <div class="container text-center">
-        <p class="mb-0">&copy; 2024 Рецепты. Все права защищены.</p>
+        <p class="mb-0">&copy; 2024 Recipies. All rights reserved.</p>
     </div>
 </footer>
 

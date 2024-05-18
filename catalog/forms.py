@@ -27,6 +27,17 @@ class CookSearchForm(forms.Form):
     )
 
 
+class DishSearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={"placeholder": "Name or ingredient"}
+        )
+    )
+
+
 class CookCreationForm(UserCreationForm):
     class Meta:
         model = Cook
@@ -36,5 +47,5 @@ class CookCreationForm(UserCreationForm):
 class CookForm(forms.ModelForm):
     class Meta:
         model = Cook
-        fields = ['username', 'email', 'avatar']
+        fields = ('username', 'email', 'first_name', 'last_name', 'avatar')
 

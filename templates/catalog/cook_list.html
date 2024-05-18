@@ -3,7 +3,9 @@
 {% load static %}
 
 {% block content %}
-{% for cook, dish_count in cook_list %}
+<br>
+{% if cook_list %}
+{% for cook, dishes_count in cook_list_with_dishes_count %}
 <div class="container bootstrap snippets bootdey">
   <div class="col">
     <div class="card shadow-sm">
@@ -17,7 +19,6 @@
         {% endif %}" alt="Cook`s photo" class="img-fluid rounded-circle mb-3" style="max-height: 200px; width: auto;">
       </div>
       <div class="col-md-8">
-        <strong>Information</strong><br>
         <div class="table-responsive">
           <table class="table table-user-information">
             <tbody>
@@ -70,7 +71,7 @@
                 </strong>
               </td>
               <td class="text-primary">
-                {{ dish_count }}
+                {{ dishes_count }}
               </td>
             </tr>
 
@@ -90,6 +91,9 @@
           </table>
         </div>
       </div>
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+            <a class="btn bg-body-secondary" href="{{ cook.get_absolute_url }}">Go to profile</a>
+      </div>
     </div>
   </div>
 </div>
@@ -97,4 +101,7 @@
   </div>
 <br>
 {% endfor %}
+{% else %}
+<p>There are no cooks in the service.</p>
+{% endif %}
 {% endblock %}
