@@ -24,9 +24,9 @@ class ReviewAdmin(admin.ModelAdmin):
 
 @admin.register(Cook)
 class CookAdmin(admin.ModelAdmin):
-    list_display = ("id", ) + UserAdmin.list_display
+    list_display = ("id", "bio",) + UserAdmin.list_display
     fieldsets = UserAdmin.fieldsets + (
-        (("Avatar", {"fields": ("avatar",)}),)
+        (("Additional info", {"fields": ("avatar", "bio")}),)
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
         (
@@ -37,6 +37,7 @@ class CookAdmin(admin.ModelAdmin):
                         "first_name",
                         "last_name",
                         "avatar",
+                        "bio"
                     )
                 },
             ),

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2 class="text-center mg-t-5">{{ dish.name }}</h2>
+<div class="container mt-auto">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ dish.image }}" alt="{{ dish.name }}"
+           onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';"
+           style="max-width: 400px; width: auto; border-radius: 5px">
+      <div class="card-body mt-4" style="max-width: 400px">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="d-flex justify-content-between mt-2">
+                <p class="card-text ms-5">Servings</p>
+              <div>
+                <p class="card-text me-5">{{ dish.servings }}</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="card-text ms-5">Cooking time</p>
+              <div>
+                <p class="card-text me-5">{{ dish.formatted_cooking_time }}</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="card-text ms-5">Calories</p>
+              <div>
+                <p class="card-text me-5">{{ dish.calories }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <div class="col">
+          <div class="card shadow-sm">
+            <h5 class="card-text mt-3 text-center">Ingredients</h5>
+            {% for composition in dish.dish_ingredients.all %}
+            <div class="d-flex justify-content-between">
+                <p class="card-text ms-5">{{ composition.ingredient.name }}</p>
+              <div>
+                <p class="card-text me-5">{{ composition.amount }}   {{ composition.measure }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 mt-4">
+      <div class="card-body">
+        <div class="col">
+          <div class="card shadow-sm">
+            <h5 class="card-text mt-3 text-center">Recipe</h5>
+            <div class="card-text mx-4">
+                <p class="card-text ms-5">{{ dish.recipe|linebreaks }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -60,6 +60,14 @@ class Dish(models.Model):
     def __str__(self):
         return f"{self.name} by {self.author}"
 
+    @property
+    def formatted_cooking_time(self):
+        hours, minutes = divmod(self.cooking_time.seconds // 60, 60)
+        if hours > 0:
+            return f"{hours} h {minutes} min"
+        else:
+            return f"{minutes} min"
+
     class Meta:
         verbose_name_plural = "Dishes"
 
@@ -88,6 +96,7 @@ class Composition(models.Model):
 class Cook(AbstractUser):
     favorite_dishes = models.ManyToManyField(Dish)
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
+    bio = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = "cook"

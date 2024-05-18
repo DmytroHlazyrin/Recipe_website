@@ -8,6 +8,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from django.views import generic
 
+
 from .forms import CategorySearchForm, CookForm, CookCreationForm, CookSearchForm, CookForm, DishSearchForm
 from .models import Dish, Cook, Category, Composition, Review, Ingredient
 
@@ -43,7 +44,7 @@ class CategoryListView(generic.ListView):
         name = self.request.GET.get("name", "")
         if name:
             queryset = queryset.filter(name__icontains=name)
-        queryset = queryset.annotate(num_dishes=Count('dishes'))
+        queryset = queryset.annotate(num_dishes=Count('dishes')).order_by('-num_dishes')
         return queryset
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -105,9 +106,10 @@ class SignUpView(generic.CreateView):
 
 class CookDetailView(LoginRequiredMixin, generic.DetailView):
     model = Cook
-    queryset = Cook.objects.all().prefetch_related("dishes__category")
     template_name = 'catalog/cook_detail.html'
 
+    def get_queryset(self):
+        return super().get_queryset().prefetch_related("dishes__category")
 
 
 class CookListView(generic.ListView):
@@ -145,6 +147,18 @@ def update_profile(request, pk):
         form = CookForm(instance=request.user)
     return render(request, 'catalog/cook_form.html', {'form': form})
 
+
+class DishDetailView(generic.DetailView):
+    model = Dish
+    template_name = 'catalog/dish_detail.html'
+
+    def get_queryset(self):
+        queryset = Dish.objects.prefetch_related("dish_ingredients__ingredient")
+        return queryset
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 
