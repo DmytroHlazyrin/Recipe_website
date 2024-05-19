@@ -104,3 +104,11 @@ class Cook(AbstractUser):
 
     def get_absolute_url(self):
         return reverse("catalog:cook-detail", kwargs={"pk": self.pk})
+
+    def add_to_favorites(self, dish):
+        if dish not in self.favorite_dishes.all():
+            self.favorite_dishes.add(dish)
+
+    def remove_from_favorites(self, dish):
+        if dish in self.favorite_dishes.all():
+            self.favorite_dishes.remove(dish)

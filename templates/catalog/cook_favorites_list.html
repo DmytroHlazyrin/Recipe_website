@@ -1,18 +1,17 @@
 {% extends "base.html" %}
-{% load static %}
 {% load crispy_forms_filters %}
+{% load static %}
 
 {% block content %}
   <h1 class="text-center">
-    ALL Dishes in category {{ category.name }}
+    Your favorites recipes.
   </h1>
 
-
-  {% if dishes %}
+  {% if favorite_dishes %}
   <div class="album py-5 bg-light">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          {% for dish in dishes %}
+          {% for dish in favorite_dishes %}
             {% include "catalog/dish_card.html" %}
           {% endfor %}
       </div>
@@ -20,6 +19,6 @@
   </div>
 
   {% else %}
-      <p>There are no dishes in this category.</p>
+      <p>There are no dishes in the site.</p>
   {% endif %}
 {% endblock %}

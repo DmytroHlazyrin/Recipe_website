@@ -13,7 +13,7 @@
       <h2>{{ cook.username }}</h2>
       <p class="text-muted">{{ cook.email }}</p>
       {% if cook.id == user.id %}
-      <a href="{% url 'catalog:cook-update' cook.pk %}"
+      <a href="{% url 'catalog:cook-update' %}"
          class="btn btn-secondary">Edit profile</a>
       {% endif %}
     </div>

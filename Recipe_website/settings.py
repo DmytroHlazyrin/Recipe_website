@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "ajax_select",
     "crispy_forms",
     "crispy_bootstrap5",
     "catalog",
@@ -82,6 +83,11 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 WSGI_APPLICATION = "Recipe_website.wsgi.application"
 
+AJAX_SELECT_BOOTSTRAP = True
+
+AJAX_LOOKUP_CHANNELS = {
+    'ingredients': ('catalog.lookups', 'IngredientLookup'),
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

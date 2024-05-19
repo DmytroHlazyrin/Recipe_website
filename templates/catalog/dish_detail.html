@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load range_tags %}
 {% block content %}
 <h2 class="text-center mg-t-5">{{ dish.name }}</h2>
 <div class="container mt-auto">
@@ -12,26 +13,26 @@
         <div class="col">
           <div class="card shadow-sm">
             <div class="d-flex justify-content-between mt-2">
-                <p class="card-text ms-5">Servings</p>
+              <p class="card-text ms-5">Servings</p>
               <div>
                 <p class="card-text me-5">{{ dish.servings }}</p>
               </div>
             </div>
             <div class="d-flex justify-content-between">
-                <p class="card-text ms-5">Cooking time</p>
+              <p class="card-text ms-5">Cooking time</p>
               <div>
                 <p class="card-text me-5">{{ dish.formatted_cooking_time }}</p>
               </div>
             </div>
             <div class="d-flex justify-content-between">
-                <p class="card-text ms-5">Calories</p>
+              <p class="card-text ms-5">Calories</p>
               <div>
                 <p class="card-text me-5">{{ dish.calories }}</p>
               </div>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
     <div class="col-md-6">
       <div class="card-body">
@@ -40,9 +41,9 @@
             <h5 class="card-text mt-3 text-center">Ingredients</h5>
             {% for composition in dish.dish_ingredients.all %}
             <div class="d-flex justify-content-between">
-                <p class="card-text ms-5">{{ composition.ingredient.name }}</p>
+              <p class="card-text ms-5">{{ composition.ingredient.name }}</p>
               <div>
-                <p class="card-text me-5">{{ composition.amount }}   {{ composition.measure }}</p>
+                <p class="card-text me-5">{{ composition.amount }} {{ composition.measure }}</p>
               </div>
             </div>
             {% endfor %}
@@ -56,8 +57,42 @@
           <div class="card shadow-sm">
             <h5 class="card-text mt-3 text-center">Recipe</h5>
             <div class="card-text mx-4">
-                <p class="card-text ms-5">{{ dish.recipe|linebreaks }}</p>
+              <p class="card-text ms-5">{{ dish.recipe|linebreaks }}</p>
             </div>
+          </div>
+          <div class="card shadow-sm">
+            <h5 class="card-text mt-3 text-center">Reviews</h5>
+            {% if user.is_authenticated %}
+            <a href="{% url 'catalog:review-add' pk=dish.pk %}" class="btn btn-primary">Add Review</a>
+            {% endif %}
+
+            {% for review in dish.reviews.all %}
+            <div class="card shadow-sm">
+              <div class="d-flex justify-content-between mt-2">
+                <p class="card-text me-5 mx-5">
+                  {% for i in review.rating|times %}
+                    <i class="fa fa-star" style="color: gold" aria-hidden="true"></i>
+                  {% endfor %}
+                  {% for i in review.rating|remaining_stars %}
+                    <i class="fa fa-star-o" style="color: gold"  aria-hidden="true"></i>
+                  {% endfor %}
+                </p>
+                <div>
+                  <a class="card-text ms-5 me-2 mx-2" href="{{ review.author.get_absolute_url }}">{{ review.author }}</a>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="card-text me-5 mx-4">{{ review.review_body }}</p>
+                <div class="mb-2 me-2">
+                  {% if user == review.author %}
+                  <a href="{% url 'catalog:review-edit' pk=review.pk %}" class="btn btn-secondary">Edit</a>
+                  <a href="{% url 'catalog:review-delete' pk=review.pk %}" class="btn btn-danger">Delete</a>
+                  {% endif %}
+                </div>
+              </div>
+                <p class="card-text me-5 mx-4 mb-2">{{ review.date }}</p>
+            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

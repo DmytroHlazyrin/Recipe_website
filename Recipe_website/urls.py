@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from catalog.views import index, SignUpView
+from catalog.views import SignUpView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path('accounts/signup/', SignUpView.as_view(), name='signup'),
     path("__debug__/", include("debug_toolbar.urls")),
+    path('ajax_select/', include('ajax_select.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

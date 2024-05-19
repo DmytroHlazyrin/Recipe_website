@@ -15,14 +15,14 @@
           {% for category, dishes_count in category_list_with_dishes_count %}
           <div class="col">
             <div class="card shadow-sm">
-              <img src="{{ category.image }}" alt="{{ category.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';" style="max-height: 200px; width: auto; border-radius: 5px">
+              <img src="{{ category.image }}" alt="{{ category.name }}" onerror="this.onerror=null; this.src='{% static 'images/dish_image.png' %}';" style="max-height: 235px; width: auto; border-radius: 5px">
               <div class="card-body">
                 <p class="card-text text-center">{{ category.name }}</p>
                 <p class="card-text">Number of recipes: {{ dishes_count }}</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a class="btn bg-body-secondary" href="{% url 'catalog:category-detail' category.pk %}">Go to dishes</a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <div class="btn-group text-center" style="margin: 0 auto; display: block;">
+                    <a href="{% url 'catalog:category-detail' category.pk %}"
+                      class="btn btn-secondary" style="width: 150px;">View</a>
                   </div>
                 </div>
               </div>
