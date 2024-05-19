@@ -38,6 +38,13 @@
       <div class="card-body">
         <div class="col">
           <div class="card shadow-sm">
+            <p class="card-text me-5 mx-4">{{ dish.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body mt-4">
+        <div class="col">
+          <div class="card shadow-sm">
             <h5 class="card-text mt-3 text-center">Ingredients</h5>
             {% for composition in dish.dish_ingredients.all %}
             <div class="d-flex justify-content-between">

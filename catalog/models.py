@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser, User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 class Ingredient(models.Model):
@@ -38,7 +39,7 @@ class Review(models.Model):
         ]
     )
     review_body = models.TextField(max_length=1000)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField(default=timezone.now)
 
     def __str__(self):
         return f"{self.dish} review by {self.author} ({self.date})"
@@ -97,6 +98,7 @@ class Cook(AbstractUser):
     favorite_dishes = models.ManyToManyField(Dish)
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
+    add_date = models.DateTimeField(default=timezone.now)
 
     class Meta:
         verbose_name = "cook"
