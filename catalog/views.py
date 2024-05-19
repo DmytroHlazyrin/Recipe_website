@@ -51,7 +51,7 @@ class CategoryDetailView(generic.DetailView):
         if form.is_valid():
             query = form.cleaned_data.get('query')
             if query:
-                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query))
+                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query)).distinct()
         context['num_dishes'] = queryset.count()
         context['dishes'] = queryset
         context['search_form'] = form
@@ -107,7 +107,7 @@ class CookFavoritesListView(LoginRequiredMixin, generic.ListView):
         if form.is_valid():
             query = form.cleaned_data.get('query')
             if query:
-                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query))
+                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query)).distinct()
         else:
             print("Form errors:", form.errors)
         return queryset
@@ -179,6 +179,7 @@ class DishDetailView(generic.DetailView):
         return context
 
 
+
 class DishListView(generic.ListView):
     model = Dish
     template_name = "catalog/dish_list.html"
@@ -198,7 +199,7 @@ class DishListView(generic.ListView):
         if form.is_valid():
             query = form.cleaned_data.get('query')
             if query:
-                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query))
+                queryset = queryset.filter(Q(name__icontains=query) | Q(ingredients__name__icontains=query)).distinct()
         return queryset
 
 
