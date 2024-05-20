@@ -1,0 +1,9 @@
+.dots {
+  display: flex;
+}
+.dots::after {
+  white-space: nowrap;
+  overflow: hidden;
+  direction: rtl;
+  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+}
