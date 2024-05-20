@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -25,11 +26,12 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("catalog.urls", namespace="catalog")),
     path("accounts/", include("django.contrib.auth.urls")),
-    path('accounts/signup/', SignUpView.as_view(), name='signup'),
+    path("accounts/signup/", SignUpView.as_view(), name="signup"),
     path("__debug__/", include("debug_toolbar.urls")),
-    path('ajax_select/', include('ajax_select.urls')),
-
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(
+    settings.STATIC_URL,
+    document_root=settings.STATIC_ROOT
+)
 
 if settings.DEBUG:
     urlpatterns += static(
