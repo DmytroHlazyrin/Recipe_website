@@ -28,7 +28,7 @@ SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ['recipe-website-zmdf.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['recipe-website-zmdf.onrender.com', 'localhost']
 
 
 # Application definition
@@ -52,6 +52,7 @@ INTERNAL_IPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
