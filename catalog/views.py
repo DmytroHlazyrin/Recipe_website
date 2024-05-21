@@ -208,7 +208,7 @@ class DishListView(generic.ListView):
     model = Dish
     template_name = "catalog/dish_list.html"
     context_object_name = "dish_list"
-    paginate_by = 5
+    paginate_by = 6
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
