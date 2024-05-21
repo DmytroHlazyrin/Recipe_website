@@ -28,8 +28,9 @@ SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ['recipe-website-zmdf.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['recipe-website-zmdf.onrender.com', '127.0.0.1', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://recipe-website-zmdf.onrender.com']
 
 # Application definition
 
