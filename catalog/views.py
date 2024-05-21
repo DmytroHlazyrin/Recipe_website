@@ -166,7 +166,7 @@ class CookListView(generic.ListView):
         return context
 
     def get_queryset(self):
-        queryset = Cook.objects.annotate(dishes_count=Count("dishes"))
+        queryset = Cook.objects.annotate(dishes_count=Count("dishes")).distinct()
         form = CookSearchForm(self.request.GET)
         if form.is_valid():
             username = form.cleaned_data.get("username")
