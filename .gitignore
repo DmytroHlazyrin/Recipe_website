@@ -1,7 +1,2 @@
 .idea
 model_structure.svg
-__pycache__
-main.py
-db.sqlite3
-.env
-.venv
