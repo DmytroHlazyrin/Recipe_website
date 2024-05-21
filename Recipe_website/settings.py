@@ -28,7 +28,7 @@ SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['recipe-website-zmdf.onrender.com',]
 
 
 # Application definition
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 
 INTERNAL_IPS = [
     "127.0.0.1",
-    "recipe-website-zmdf.onrender.com",
 ]
 
 MIDDLEWARE = [
