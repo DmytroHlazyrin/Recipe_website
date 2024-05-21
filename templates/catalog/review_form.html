@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block title %}<title>{% if review.pk %}Edit{% else %}Add{% endif %} Review</title>{% endblock %}
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .card {
+        border-radius: 15px;
+    }
+    .card-header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+    .form-control {
+        border-radius: 10px;
+    }
+    .star-rating {
+        direction: rtl;
+        display: inline-block;
+        padding: 20px;
+    }
+    .star-rating input[type=radio] {
+        display: none;
+    }
+    .star-rating label {
+        font-size: 30px;
+        color: #ddd;
+        cursor: pointer;
+    }
+    .star-rating input[type=radio]:checked ~ label {
+        color: #ffc700;
+    }
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+        color: #deb217;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>{% if review.pk %}Edit{% else %}Add{% endif %} Review</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_rating">Rating</label>
+                            <div class="star-rating">
+                                {% for i in "54321" %}
+                                    <input type="radio" name="rating" id="rating-{{ i }}" value="{{ i }}" {% if form.rating.value == i %}checked{% endif %}>
+                                    <label for="rating-{{ i }}">&#9733;</label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ form.review_body|as_crispy_field }}
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{% url 'catalog:dish-detail' pk=dish.pk %}" class="btn btn-secondary">Back to Dish</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+{% endblock %}

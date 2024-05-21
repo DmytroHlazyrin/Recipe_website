@@ -1,0 +1,2001 @@
+[
+{
+    "model": "catalog.ingredient",
+    "pk": 1,
+    "fields": {
+        "name": "Sugar"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 2,
+    "fields": {
+        "name": "Water"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 3,
+    "fields": {
+        "name": "Bread"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 4,
+    "fields": {
+        "name": "Powdered breadcrumbs"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 5,
+    "fields": {
+        "name": "Vegetable oil"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 6,
+    "fields": {
+        "name": "Table vinegar"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 7,
+    "fields": {
+        "name": "Wheat flour"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 8,
+    "fields": {
+        "name": "Eggs"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 9,
+    "fields": {
+        "name": "Salt"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 10,
+    "fields": {
+        "name": "Mushrooms"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 11,
+    "fields": {
+        "name": "Olives"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 12,
+    "fields": {
+        "name": "Mayonnaise"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 13,
+    "fields": {
+        "name": "Ketchup"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 14,
+    "fields": {
+        "name": "Cheese"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 15,
+    "fields": {
+        "name": "Salami"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 16,
+    "fields": {
+        "name": "Tomato"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 17,
+    "fields": {
+        "name": "Potato"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 18,
+    "fields": {
+        "name": "Chicken breast"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 19,
+    "fields": {
+        "name": "Milk"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 20,
+    "fields": {
+        "name": "Pepper"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 21,
+    "fields": {
+        "name": "Olive oil"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 22,
+    "fields": {
+        "name": "Onion"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 23,
+    "fields": {
+        "name": "Garlic"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 24,
+    "fields": {
+        "name": "Lemon"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 25,
+    "fields": {
+        "name": "Pasta"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 26,
+    "fields": {
+        "name": "Rice"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 27,
+    "fields": {
+        "name": "Butter"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 28,
+    "fields": {
+        "name": "Spinach"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 29,
+    "fields": {
+        "name": "Beef"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 30,
+    "fields": {
+        "name": "Pork"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 31,
+    "fields": {
+        "name": "Shrimp"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 32,
+    "fields": {
+        "name": "Avocado"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 33,
+    "fields": {
+        "name": "Cucumber"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 34,
+    "fields": {
+        "name": "Carrot"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 35,
+    "fields": {
+        "name": "Broccoli"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 36,
+    "fields": {
+        "name": "Green beans"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 37,
+    "fields": {
+        "name": "Lettuce"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 38,
+    "fields": {
+        "name": "Basil"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 39,
+    "fields": {
+        "name": "Cilantro"
+    }
+},
+{
+    "model": "catalog.ingredient",
+    "pk": 40,
+    "fields": {
+        "name": "Mint"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Simple dishes",
+        "description": "",
+        "image": "https://live.staticflickr.com/21/87977418_d088c0a23d_b.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Sandwiches",
+        "description": null,
+        "image": "https://img.taste.com.au/OX2Wle32/taste/2016/11/marinated-chicken-club-sandwich-1970-1.jpeg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+        "name": "Soups",
+        "description": null,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3oVBRq-UpCiQTXiRcFcLh4NpsQdtSomhbQ&s"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+        "name": "Pasta",
+        "description": null,
+        "image": "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/variety-of-pasta-1296x728.jpg?w=1155&h=1528"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+        "name": "Desserts",
+        "description": null,
+        "image": "https://cdn.hswstatic.com/gif/desserts-update.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 6,
+    "fields": {
+        "name": "Beverages",
+        "description": null,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5k2BzF-3b5Oh1uUtdS-wH4V017BGiJoJCzg&s"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 7,
+    "fields": {
+        "name": "Fish",
+        "description": null,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXFmtlG-jp5cgD6h2LDgGJJGUrvek5s0PYg&s"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 8,
+    "fields": {
+        "name": "Meat",
+        "description": "Meat-based dishes. No vegetarians allowed",
+        "image": "https://cdn.pixabay.com/photo/2017/07/16/10/43/recipe-2508859_640.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 9,
+    "fields": {
+        "name": "Pizza",
+        "description": "All the pizzas in the world, even pineapple.",
+        "image": "https://www.stockvault.net/data/2016/03/12/187363/preview16.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 10,
+    "fields": {
+        "name": "Nigiri",
+        "description": "Japan nigiri",
+        "image": "https://img.ccnull.de/1020000/preview/1023140_b47be4d1af4c1e1fae5de7888b62bc92.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 11,
+    "fields": {
+        "name": "Breakfast",
+        "description": "Morning dishes",
+        "image": "https://cdn.pixabay.com/photo/2024/01/18/07/18/waffles-8516336_640.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 12,
+    "fields": {
+        "name": "Lunch",
+        "description": "Midday meals",
+        "image": "https://cdn.pixabay.com/photo/2015/01/16/15/02/eating-601581_640.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 13,
+    "fields": {
+        "name": "Dinner",
+        "description": "Evening meals",
+        "image": "https://media.istockphoto.com/id/1183586464/photo/typical-swedish-scandinavian-christmas-food-sm%C3%B6rg%C3%A5sbord.jpg?s=612x612&w=0&k=20&c=FjPZC-yuJXH7ih1jViK5R4U1ridU_MIM7uslkOL2ltA="
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 14,
+    "fields": {
+        "name": "Appetizers",
+        "description": "Starters and snacks",
+        "image": "https://cdn.pixabay.com/photo/2018/04/13/17/14/vegetable-skewer-3317060_640.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 15,
+    "fields": {
+        "name": "Salads",
+        "description": "Healthy salads",
+        "image": "https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_1280.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 16,
+    "fields": {
+        "name": "Vegetarian",
+        "description": "Meat-free dishes",
+        "image": "https://cdn.pixabay.com/photo/2017/09/22/19/05/casserole-dish-2776735_640.jpg"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 17,
+    "fields": {
+        "name": "Seafood",
+        "description": "Delicious seafood dishes",
+        "image": "https://cdn.pixabay.com/photo/2013/07/19/00/18/seafood-165220_640.jpg"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 2,
+    "fields": {
+        "author": 1,
+        "dish": 1,
+        "rating": 2,
+        "review_body": "It is very simple recipe",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 3,
+    "fields": {
+        "author": 2,
+        "dish": 1,
+        "rating": 4,
+        "review_body": "I like it",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 4,
+    "fields": {
+        "author": 1,
+        "dish": 1,
+        "rating": 5,
+        "review_body": "The best recipe ever",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 5,
+    "fields": {
+        "author": 1,
+        "dish": 1,
+        "rating": 4,
+        "review_body": "Great dish!",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 6,
+    "fields": {
+        "author": 2,
+        "dish": 2,
+        "rating": 5,
+        "review_body": "Delicious!",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 7,
+    "fields": {
+        "author": 3,
+        "dish": 3,
+        "rating": 3,
+        "review_body": "Good, but could be better.",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.review",
+    "pk": 8,
+    "fields": {
+        "author": 4,
+        "dish": 4,
+        "rating": 5,
+        "review_body": "Absolutely loved it!",
+        "date": "2024-05-19"
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 1,
+    "fields": {
+        "image": "https://static.1000.menu/res/640/img/content-v2/95/7c/85684/yaica-v-panirovke-na-skovorode_1715541288_1_srcdupt_max.jpg",
+        "author": 1,
+        "name": "POACHED EGGS IN A FRYING PAN",
+        "description": "This is a breakfast you have never tasted before! Pan-fried eggs is a French dish, exquisite and at the same time simple in execution. The pre-boiled egg remains with a liquid center. The combination with an appetizing crispy crust turns out very tasty!",
+        "recipe": "How to make breaded chicken eggs in a frying pan? Prepare the products. Take one more egg than you need for the portions - it will go into the breading. Take them out of the refrigerator in advance, so that they do not burst when cooking. Take oil for frying, without odor. The article on the link at the end of the recipe will help with the choice of oil. Vinegar you will need ordinary table vinegar, 9%, if it is not available, take wine vinegar or apple vinegar. You will also need ice to cool the eggs quickly.",
+        "cooking_time": "00:15:00",
+        "servings": 2,
+        "addition_date": "2024-05-16",
+        "calories": 300,
+        "category": 1
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 2,
+    "fields": {
+        "image": "https://memories-matter.blog/wp-content/uploads/2018/03/6808-bread-butter-sugar.jpg",
+        "author": 2,
+        "name": "The best sandwich from childhood",
+        "description": "A delicious dish from your childhood with a nostalgic aftertaste",
+        "recipe": "Some very simple recipe",
+        "cooking_time": "00:02:00",
+        "servings": 1,
+        "addition_date": "2024-05-16",
+        "calories": 200,
+        "category": 2
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 3,
+    "fields": {
+        "image": "https://www.publicdomainpictures.net/pictures/270000/nahled/pizza-1532881335pCX.jpg",
+        "author": 1,
+        "name": "Pizza Carbonara",
+        "description": "My Favorite pizza",
+        "recipe": "Step1\r\nSome test step\r\nStep2\r\nSome test step\r\nStep3\r\nSome test step\r\nStep4\r\nSome test step",
+        "cooking_time": "00:40:00",
+        "servings": 4,
+        "addition_date": "2024-05-18",
+        "calories": 600,
+        "category": 9
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 4,
+    "fields": {
+        "image": "https://static.1000.menu/res/380/img/content-v2/95/7c/85684/yaica-v-panirovke-na-skovorode_1715601978_0_i3uzm03_max.jpg",
+        "author": 1,
+        "name": "Test DIsh",
+        "description": "Some very important description",
+        "recipe": "Take money and buy a pizza",
+        "cooking_time": "00:02:00",
+        "servings": 2,
+        "addition_date": "2024-05-19",
+        "calories": 1000,
+        "category": 9
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 5,
+    "fields": {
+        "image": "https://example.com/nonexistent_image.jpg",
+        "author": 2,
+        "name": "Second test dish",
+        "description": "Cooking time\r\nNumber of servings\r\nSelect ingredients\r\nEnter the number of ingredients in the same order as above. Example: 100g, 2tbsp.",
+        "recipe": "How to make liquid dough on kefir without yeast for pizza in the oven? Very simple! Take flour of the highest grade. Vegetable oil is suitable for any. I have sunflower oil. Kefir is suitable fat from 2.5% and above. Kefir and egg should be at room temperature, so take them out of the refrigerator in advance. The dough itself is kneaded in a matter of minutes. Therefore, turn on the oven to 180℃ in advance.\r\n\r\nTranslated with www.DeepL.com/Translator (free version)",
+        "cooking_time": "00:40:00",
+        "servings": 4,
+        "addition_date": "2024-05-19",
+        "calories": 1200,
+        "category": 1
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 6,
+    "fields": {
+        "image": null,
+        "author": 1,
+        "name": "Spaghetti Carbonara",
+        "description": "Classic Italian pasta with creamy sauce",
+        "recipe": "Cook pasta, mix with eggs, cheese, and pancetta.",
+        "cooking_time": "00:30:00",
+        "servings": 4,
+        "addition_date": "2024-05-19",
+        "calories": 450,
+        "category": 4
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 7,
+    "fields": {
+        "image": null,
+        "author": 2,
+        "name": "Chicken Tikka Masala",
+        "description": "Indian spiced chicken in creamy tomato sauce",
+        "recipe": "Marinate chicken, grill, simmer in tomato sauce with spices and cream.",
+        "cooking_time": "00:45:00",
+        "servings": 6,
+        "addition_date": "2024-05-19",
+        "calories": 550,
+        "category": 14
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 8,
+    "fields": {
+        "image": null,
+        "author": 3,
+        "name": "Chocolate Cake",
+        "description": "Rich and decadent chocolate cake",
+        "recipe": "Mix dry ingredients, add wet, bake, frost with chocolate ganache.",
+        "cooking_time": "01:00:00",
+        "servings": 8,
+        "addition_date": "2024-05-19",
+        "calories": 350,
+        "category": 5
+    }
+},
+{
+    "model": "catalog.dish",
+    "pk": 9,
+    "fields": {
+        "image": null,
+        "author": 4,
+        "name": "Caesar Salad",
+        "description": "Classic salad with romaine lettuce and Caesar dressing",
+        "recipe": "Toss lettuce with dressing, add croutons, sprinkle with parmesan.",
+        "cooking_time": "00:15:00",
+        "servings": 2,
+        "addition_date": "2024-05-19",
+        "calories": 250,
+        "category": 15
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 1,
+    "fields": {
+        "dish": 1,
+        "ingredient": 8,
+        "amount": "3.00",
+        "measure": "piece"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 2,
+    "fields": {
+        "dish": 1,
+        "ingredient": 7,
+        "amount": "3.00",
+        "measure": "tbsp"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 3,
+    "fields": {
+        "dish": 1,
+        "ingredient": 4,
+        "amount": "5.00",
+        "measure": "tbsp"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 4,
+    "fields": {
+        "dish": 1,
+        "ingredient": 5,
+        "amount": "6.00",
+        "measure": "tbsp"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 5,
+    "fields": {
+        "dish": 1,
+        "ingredient": 6,
+        "amount": "1.00",
+        "measure": "tbsp"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 6,
+    "fields": {
+        "dish": 2,
+        "ingredient": 3,
+        "amount": "2.00",
+        "measure": "piece"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 7,
+    "fields": {
+        "dish": 2,
+        "ingredient": 2,
+        "amount": "200.00",
+        "measure": "ml"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 8,
+    "fields": {
+        "dish": 2,
+        "ingredient": 1,
+        "amount": "30.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 9,
+    "fields": {
+        "dish": 3,
+        "ingredient": 7,
+        "amount": "200.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 10,
+    "fields": {
+        "dish": 3,
+        "ingredient": 9,
+        "amount": "5.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 11,
+    "fields": {
+        "dish": 3,
+        "ingredient": 14,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 12,
+    "fields": {
+        "dish": 3,
+        "ingredient": 12,
+        "amount": "40.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 13,
+    "fields": {
+        "dish": 3,
+        "ingredient": 13,
+        "amount": "40.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 14,
+    "fields": {
+        "dish": 3,
+        "ingredient": 15,
+        "amount": "50.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 15,
+    "fields": {
+        "dish": 3,
+        "ingredient": 2,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 16,
+    "fields": {
+        "dish": 3,
+        "ingredient": 11,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 17,
+    "fields": {
+        "dish": 3,
+        "ingredient": 10,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 18,
+    "fields": {
+        "dish": 4,
+        "ingredient": 12,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 19,
+    "fields": {
+        "dish": 4,
+        "ingredient": 10,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 20,
+    "fields": {
+        "dish": 4,
+        "ingredient": 7,
+        "amount": "200.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 21,
+    "fields": {
+        "dish": 4,
+        "ingredient": 13,
+        "amount": "20.00",
+        "measure": "ml"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 22,
+    "fields": {
+        "dish": 4,
+        "ingredient": 2,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 23,
+    "fields": {
+        "dish": 4,
+        "ingredient": 15,
+        "amount": "50.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 24,
+    "fields": {
+        "dish": 4,
+        "ingredient": 14,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 25,
+    "fields": {
+        "dish": 5,
+        "ingredient": 3,
+        "amount": "2.00",
+        "measure": "piece"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 26,
+    "fields": {
+        "dish": 5,
+        "ingredient": 2,
+        "amount": "100.00",
+        "measure": "ml"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 27,
+    "fields": {
+        "dish": 5,
+        "ingredient": 9,
+        "amount": "5.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 28,
+    "fields": {
+        "dish": 6,
+        "ingredient": 32,
+        "amount": "10.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 29,
+    "fields": {
+        "dish": 6,
+        "ingredient": 38,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 30,
+    "fields": {
+        "dish": 6,
+        "ingredient": 29,
+        "amount": "30.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 31,
+    "fields": {
+        "dish": 6,
+        "ingredient": 3,
+        "amount": "40.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 32,
+    "fields": {
+        "dish": 6,
+        "ingredient": 35,
+        "amount": "50.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 33,
+    "fields": {
+        "dish": 6,
+        "ingredient": 27,
+        "amount": "60.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 34,
+    "fields": {
+        "dish": 6,
+        "ingredient": 34,
+        "amount": "70.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 35,
+    "fields": {
+        "dish": 6,
+        "ingredient": 14,
+        "amount": "80.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 36,
+    "fields": {
+        "dish": 6,
+        "ingredient": 18,
+        "amount": "90.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 37,
+    "fields": {
+        "dish": 6,
+        "ingredient": 39,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 38,
+    "fields": {
+        "dish": 6,
+        "ingredient": 33,
+        "amount": "110.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 39,
+    "fields": {
+        "dish": 6,
+        "ingredient": 8,
+        "amount": "120.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 40,
+    "fields": {
+        "dish": 6,
+        "ingredient": 23,
+        "amount": "130.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 41,
+    "fields": {
+        "dish": 6,
+        "ingredient": 36,
+        "amount": "140.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 42,
+    "fields": {
+        "dish": 6,
+        "ingredient": 13,
+        "amount": "150.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 43,
+    "fields": {
+        "dish": 6,
+        "ingredient": 24,
+        "amount": "160.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 44,
+    "fields": {
+        "dish": 6,
+        "ingredient": 37,
+        "amount": "170.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 45,
+    "fields": {
+        "dish": 6,
+        "ingredient": 12,
+        "amount": "180.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 46,
+    "fields": {
+        "dish": 6,
+        "ingredient": 19,
+        "amount": "190.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 47,
+    "fields": {
+        "dish": 6,
+        "ingredient": 40,
+        "amount": "200.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 48,
+    "fields": {
+        "dish": 6,
+        "ingredient": 10,
+        "amount": "210.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 49,
+    "fields": {
+        "dish": 6,
+        "ingredient": 21,
+        "amount": "220.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 50,
+    "fields": {
+        "dish": 6,
+        "ingredient": 11,
+        "amount": "230.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 51,
+    "fields": {
+        "dish": 6,
+        "ingredient": 22,
+        "amount": "240.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 52,
+    "fields": {
+        "dish": 6,
+        "ingredient": 25,
+        "amount": "250.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 53,
+    "fields": {
+        "dish": 6,
+        "ingredient": 20,
+        "amount": "260.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 54,
+    "fields": {
+        "dish": 6,
+        "ingredient": 30,
+        "amount": "270.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 55,
+    "fields": {
+        "dish": 6,
+        "ingredient": 17,
+        "amount": "280.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 56,
+    "fields": {
+        "dish": 6,
+        "ingredient": 4,
+        "amount": "290.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 57,
+    "fields": {
+        "dish": 6,
+        "ingredient": 26,
+        "amount": "300.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 58,
+    "fields": {
+        "dish": 6,
+        "ingredient": 15,
+        "amount": "310.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 59,
+    "fields": {
+        "dish": 6,
+        "ingredient": 9,
+        "amount": "320.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 60,
+    "fields": {
+        "dish": 6,
+        "ingredient": 31,
+        "amount": "330.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 61,
+    "fields": {
+        "dish": 6,
+        "ingredient": 28,
+        "amount": "340.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 62,
+    "fields": {
+        "dish": 6,
+        "ingredient": 1,
+        "amount": "350.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 63,
+    "fields": {
+        "dish": 6,
+        "ingredient": 6,
+        "amount": "360.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 64,
+    "fields": {
+        "dish": 6,
+        "ingredient": 16,
+        "amount": "370.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 65,
+    "fields": {
+        "dish": 6,
+        "ingredient": 5,
+        "amount": "380.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 66,
+    "fields": {
+        "dish": 6,
+        "ingredient": 2,
+        "amount": "390.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 67,
+    "fields": {
+        "dish": 6,
+        "ingredient": 7,
+        "amount": "400.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 68,
+    "fields": {
+        "dish": 7,
+        "ingredient": 32,
+        "amount": "10.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 69,
+    "fields": {
+        "dish": 7,
+        "ingredient": 38,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 70,
+    "fields": {
+        "dish": 7,
+        "ingredient": 29,
+        "amount": "30.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 71,
+    "fields": {
+        "dish": 7,
+        "ingredient": 3,
+        "amount": "40.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 72,
+    "fields": {
+        "dish": 7,
+        "ingredient": 35,
+        "amount": "50.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 73,
+    "fields": {
+        "dish": 7,
+        "ingredient": 27,
+        "amount": "60.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 74,
+    "fields": {
+        "dish": 7,
+        "ingredient": 34,
+        "amount": "70.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 75,
+    "fields": {
+        "dish": 7,
+        "ingredient": 14,
+        "amount": "80.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 76,
+    "fields": {
+        "dish": 7,
+        "ingredient": 18,
+        "amount": "90.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 77,
+    "fields": {
+        "dish": 7,
+        "ingredient": 39,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 78,
+    "fields": {
+        "dish": 7,
+        "ingredient": 33,
+        "amount": "110.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 79,
+    "fields": {
+        "dish": 7,
+        "ingredient": 8,
+        "amount": "120.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 80,
+    "fields": {
+        "dish": 7,
+        "ingredient": 23,
+        "amount": "130.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 81,
+    "fields": {
+        "dish": 7,
+        "ingredient": 36,
+        "amount": "140.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 82,
+    "fields": {
+        "dish": 7,
+        "ingredient": 13,
+        "amount": "150.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 83,
+    "fields": {
+        "dish": 7,
+        "ingredient": 24,
+        "amount": "160.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 84,
+    "fields": {
+        "dish": 7,
+        "ingredient": 37,
+        "amount": "170.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 85,
+    "fields": {
+        "dish": 7,
+        "ingredient": 12,
+        "amount": "180.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 86,
+    "fields": {
+        "dish": 7,
+        "ingredient": 19,
+        "amount": "190.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 87,
+    "fields": {
+        "dish": 7,
+        "ingredient": 40,
+        "amount": "200.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 88,
+    "fields": {
+        "dish": 7,
+        "ingredient": 10,
+        "amount": "210.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 89,
+    "fields": {
+        "dish": 7,
+        "ingredient": 21,
+        "amount": "220.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 108,
+    "fields": {
+        "dish": 8,
+        "ingredient": 32,
+        "amount": "10.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 109,
+    "fields": {
+        "dish": 8,
+        "ingredient": 38,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 110,
+    "fields": {
+        "dish": 8,
+        "ingredient": 29,
+        "amount": "30.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 111,
+    "fields": {
+        "dish": 8,
+        "ingredient": 3,
+        "amount": "40.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 112,
+    "fields": {
+        "dish": 8,
+        "ingredient": 35,
+        "amount": "50.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 113,
+    "fields": {
+        "dish": 8,
+        "ingredient": 27,
+        "amount": "60.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 114,
+    "fields": {
+        "dish": 8,
+        "ingredient": 34,
+        "amount": "70.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 115,
+    "fields": {
+        "dish": 8,
+        "ingredient": 14,
+        "amount": "80.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 116,
+    "fields": {
+        "dish": 8,
+        "ingredient": 18,
+        "amount": "90.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 117,
+    "fields": {
+        "dish": 8,
+        "ingredient": 39,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 148,
+    "fields": {
+        "dish": 9,
+        "ingredient": 32,
+        "amount": "10.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 149,
+    "fields": {
+        "dish": 9,
+        "ingredient": 38,
+        "amount": "20.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 150,
+    "fields": {
+        "dish": 9,
+        "ingredient": 29,
+        "amount": "30.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 151,
+    "fields": {
+        "dish": 9,
+        "ingredient": 3,
+        "amount": "40.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 152,
+    "fields": {
+        "dish": 9,
+        "ingredient": 35,
+        "amount": "50.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 153,
+    "fields": {
+        "dish": 9,
+        "ingredient": 27,
+        "amount": "60.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 154,
+    "fields": {
+        "dish": 9,
+        "ingredient": 34,
+        "amount": "70.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 155,
+    "fields": {
+        "dish": 9,
+        "ingredient": 14,
+        "amount": "80.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 156,
+    "fields": {
+        "dish": 9,
+        "ingredient": 18,
+        "amount": "90.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.composition",
+    "pk": 157,
+    "fields": {
+        "dish": 9,
+        "ingredient": 39,
+        "amount": "100.00",
+        "measure": "g"
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$crJqyv7YGIF7S3jIhh5Onf$hDZC39OVb/UyN3bAi/00j3OKfXIx85zZEx7yJiFthFg=",
+        "last_login": "2024-05-20T17:18:10.347",
+        "is_superuser": true,
+        "username": "dima",
+        "first_name": "Dmytro",
+        "last_name": "Hlazyrin",
+        "email": "dima@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-05-16T09:55:24",
+        "avatar": "avatars/Cook.jpg",
+        "bio": "I am the creator of this site. \r\nLove me and worship me.\r\nMay the delicious food be with you.",
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": [
+            3,
+            1
+        ]
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$eNWDpBJabObLU7dzBkxWCi$f0I0UVIUond05cCUrnPsoEei0BsmwTSFG+dcWzWi+vE=",
+        "last_login": "2024-05-19T15:13:26.388",
+        "is_superuser": false,
+        "username": "FirstCook",
+        "first_name": "First",
+        "last_name": "Cooks",
+        "email": "first@cook.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-16T14:58:18",
+        "avatar": "avatars/1218783.png",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$deHU7JZorxlVwgvaDiLDQV$Mn5Jpd1oC+mxK1hQUfoXhvGf0n+WXp9k+AOgQgMncgU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Test3",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-17T16:25:43.986",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$ULcnlXVxXehWHr7Ay2mF2K$KhSGixa0SY0mKOITQWZZAaQ+Nr7uYWy0HT68ezLaJmg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "TestUser",
+        "first_name": "Viktor",
+        "last_name": "Povar",
+        "email": "test@user.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-17T16:29:16.847",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$EAu3cXfaWScOEj00lZGDZA$n4EsJQ8++lTMYMvLxlINlAOZekvzZO2/W8OlbHpj+jI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Test4",
+        "first_name": "Sashka",
+        "last_name": "Bulkin",
+        "email": "test4@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-17T16:53:56.801",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 6,
+    "fields": {
+        "password": "1qazcde3",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Test5",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-18T15:21:58",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 7,
+    "fields": {
+        "password": "1qazcde3",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Test6",
+        "first_name": "Test Name",
+        "last_name": "Test Surname",
+        "email": "test@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-18T15:22:32",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$lHz4paRZWM7xnQUhZ2X2Xi$hgsQ2KCYhJLzb+Kotk8VKc+77oWWO7mXhUrRzsN/LbM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chef1",
+        "first_name": "",
+        "last_name": "",
+        "email": "chef1@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-19T18:42:59.682",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$rFUsiqI8pvycbq0E5zP3HY$zq2ni2F/XTnnQUoPI8IURkxNdiOz3oXTXcHaDDlLjDU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chef2",
+        "first_name": "",
+        "last_name": "",
+        "email": "chef2@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-19T18:43:00.773",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$pit4mMNKq1tdjtQqPv8kQA$CC8mBCOrfj6zg1GF1LzBSeW/q67cM3Y53SZGZDu29iw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chef3",
+        "first_name": "",
+        "last_name": "",
+        "email": "chef3@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-19T18:43:02.212",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$fg7p18tXvkodw5W1FD2saJ$eYxrVfewalC+YwRPB2nuc48qrb4k/l6+lqtlg30idZo=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chef4",
+        "first_name": "",
+        "last_name": "",
+        "email": "chef4@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-19T18:43:03.381",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+},
+{
+    "model": "catalog.cook",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$Af6XE4I6pdSZ6LzKhb6OqO$Qh6Y4+GHQis35MGmBW2VN4KP0KiSkmlPmhu18xYe7Go=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chef5",
+        "first_name": "",
+        "last_name": "",
+        "email": "chef5@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-05-19T18:43:04.466",
+        "avatar": "",
+        "bio": null,
+        "groups": [],
+        "user_permissions": [],
+        "favorite_dishes": []
+    }
+}
+]

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-4 text-center">
+      <img
+          src="{% if cook.avatar %}{{ cook.avatar.url }}{% else %}{% static 'images/default_ava.png' %}{% endif %}"
+          alt="Cook`s photo" class="img-fluid rounded-circle mb-3"
+          style="max-width: 200px;">
+      <h2>{{ cook.username }}</h2>
+      <p class="text-muted">{{ cook.email }}</p>
+      {% if cook.id == user.id %}
+      <a href="{% url 'catalog:cook-update' %}"
+         class="btn btn-secondary">Edit profile</a>
+      {% endif %}
+    </div>
+    <div class="col-lg-8">
+      <h3>About {{ cook.username }}</h3>
+      {% if cook.bio %}
+      <h4>{{ cook.bio }}</h4>
+      {% else %}
+      <h4>The user is very humble and has not added a bio yet.</h4>
+      {% endif %}
+      <ul class="list-group list-group-flush mb-4">
+        {% for specialty in cook.specialties.all %}
+        <li class="list-group-item">{{ specialty }}</li>
+        {% endfor %}
+      </ul>
+      <div class="row">
+      </div>
+    </div>
+    <h2 class="text-center">Recipies by {{ cook.username }}:</h2>
+    <br>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for dish in cook.dishes.all %}
+          {% include "catalog/dish_card.html" %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2024 Recipies. All rights reserved.</p>
+  </div>
+</footer>
+
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

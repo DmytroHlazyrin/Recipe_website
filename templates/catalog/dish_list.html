@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-8 d-flex justify-content-between"></div>
+  <div class="text-center ">
+  <h1 class="text-center">
+    There are already {{ num_dish }} recipes on this site.
+  </h1>
+   <a class="btn btn-primary" href="{% url 'catalog:dish-create' %}"> Add your recipe!</a>
+  </div>
+</div>
+  {% if dish_list %}
+  <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for dish in dish_list %}
+            {% include "catalog/dish_card.html" %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+      <p>There are no dishes in the site.</p>
+  {% endif %}
+{% endblock %}
