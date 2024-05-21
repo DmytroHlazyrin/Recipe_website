@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1 class="text-center">
+    ALL Dishes in category {{ category.name }}
+  </h1>
+
+
+  {% if dishes %}
+  <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for dish in dishes %}
+            {% include "catalog/dish_card.html" %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+      <p>There are no dishes in this category.</p>
+  {% endif %}
+{% endblock %}
