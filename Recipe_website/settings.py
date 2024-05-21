@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 INTERNAL_IPS = [
     "127.0.0.1",
+    "recipe-website-zmdf.onrender.com",
 ]
 
 MIDDLEWARE = [
